@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   resources :suspects, only: %i[index show new create destroy] # do
    # resources :guesses, only: %i[new create]
   # end
-  resources :guesses, only: %i[destroy new create]
+  resources :guesses, only: %i[destroy new create show index]
+  resources :weapons, only: %i[index show]
+  resources :locations, only: %i[index show]
 end

@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Meet the Suspects!</h1>
+  <h2>The Usual Suspects</h2>
+  <div class="cards">
+    <% @suspects[0..5].each do |suspect| %>
+      <%= link_to suspect_path(suspect) do%>
+        <div class="card <%= suspect.color %> text-decoration-none">
+          <img src="https://via.placeholder.com/150">
+          <div class="card-details text-decoration-none">
+            <h3><%= suspect.to_label %></h3>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <h2>Additional Suspects</h2>
+  <div class="cards">
+    <% @suspects[6..].each do |suspect| %>
+      <%= link_to suspect_path(suspect) do%>
+        <div class="card <%= suspect.color %> text-decoration-none">
+          <img src="https://via.placeholder.com/150">
+          <div class="card-details text-decoration-none">
+            <h3><%= suspect.to_label %></h3>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
