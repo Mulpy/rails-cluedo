@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>View the Weapons!</h1>
+  <div class="cards">
+    <% @weapons.each do |weapon| %>
+      <div class="card">
+        <img src="https://via.placeholder.com/150">
+        <div class="card-details">
+          <h3><%= weapon.name %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

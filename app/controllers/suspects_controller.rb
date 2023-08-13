@@ -20,6 +20,16 @@ class SuspectsController < ApplicationController
     end
   end
 
+  def destroy
+    @suspect = Suspect.find(params[:id])
+    @suspect.destroy
+    if @suspect.destroy
+      redirect_to suspect_path(@suspect)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def suspect_params

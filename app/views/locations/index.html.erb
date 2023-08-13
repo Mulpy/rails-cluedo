@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Visit the Rooms!</h1>
+  <div class="cards">
+    <% @locations.each do |location| %>
+      <div class="card">
+        <img src="https://via.placeholder.com/150">
+        <div class="card-details">
+          <h3><%= location.room %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

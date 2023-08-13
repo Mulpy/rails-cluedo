@@ -21,6 +21,9 @@
           <img src="https://via.placeholder.com/150">
           <div class="card-details text-decoration-none">
             <h3><%= suspect.to_label %></h3>
+            <%= link_to suspect_path(suspect), data: { turbo_method: :delete, turbo_confirm: "Bump Off #{suspect.to_label}?" } do %>
+              <i class="fa-solid fa-gun"></i>
+            <% end %>
           </div>
         </div>
       <% end %>
