@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container text-decoration-none">
   <h1>Meet the Suspects!</h1>
   <h2>The Usual Suspects</h2>
-  <div class="cards">
+  <div class="cards text-decoration-none">
     <% @suspects[0..5].each do |suspect| %>
       <%= link_to suspect_path(suspect) do%>
         <div class="card <%= suspect.color %> text-decoration-none">
@@ -14,7 +14,7 @@
     <% end %>
   </div>
   <h2>Additional Suspects</h2>
-  <div class="cards">
+  <div class="cards text-decoration-none">
     <% @suspects[6..].each do |suspect| %>
       <%= link_to suspect_path(suspect) do%>
         <div class="card <%= suspect.color %> text-decoration-none">

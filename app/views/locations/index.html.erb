@@ -1,13 +1,14 @@
 <div class="container">
   <h1>Visit the Rooms!</h1>
-  <div class="cards">
+  <div class="cards text-decoration-none">
     <% @locations.each do |location| %>
-      <div class="card">
-        <img src="https://via.placeholder.com/150">
-        <div class="card-details">
-          <h3><%= location.room %></h3>
+      <%= link_to location_path(location) do%>
+        <div class="card text-decoration-none">
+          <img src="https://via.placeholder.com/150">
+          <div class="card-details text-decoration-none">
+            <h3><%= location.room %></h3>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
-</div>
